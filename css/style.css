@@ -1,0 +1,2369 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --text-dark: #122820;
+    --text-muted: #1c382f;
+    --primary-green: #237756;
+    --primary-green-hover: #1b5f44;
+    --bg-light: #edf4f1;
+    --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+    /* Prevents sticky navbar from overlapping section headers */
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    /* Transition colors and apply a brief blur filter during theme changes */
+    transition: background-color 0.3s ease, color 0.3s ease, filter 0.3s ease;
+}
+
+/* Dynamic blur during theme toggle */
+body.theme-transitioning {
+    filter: blur(4px);
+}
+
+input,
+textarea,
+button,
+select {
+    font-family: inherit;
+}
+
+/* ============================================================
+    NAVIGATION HEADER STYLES
+   ============================================================ */
+
+.navbar {
+    width: 100%;
+    padding: 18px 0;
+    background-color: rgba(255, 255, 255, 0.85);
+    /* Semi-transparent */
+    backdrop-filter: blur(10px);
+    /* Modern blur effect */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo Styling */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--text-dark, #1a2b25);
+}
+
+.logo-icon {
+    color: var(--primary-green, #237756);
+}
+
+.logo-text {
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+/* Links Container */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 0 auto;
+}
+
+/* Individual Links */
+.nav-link {
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #3f524c;
+    position: relative;
+    padding: 6px 0;
+    transition: color 0.2s ease;
+}
+
+/* Base Underline (hidden by default) */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2.5px;
+    background-color: var(--primary-green, #237756);
+    border-radius: 2px;
+    transition: width 0.25s ease-in-out;
+    /* Smooth expand/collapse per link */
+}
+
+.nav-link:hover {
+    color: var(--primary-green, #237756);
+}
+
+/* Active Indicator Line */
+.nav-link.active {
+    color: var(--primary-green, #237756);
+}
+
+/* Expand underline when active */
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Download CV Pill Button */
+.btn-download-cv {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: #0b221d;
+    /* Dark teal/black pill background */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+    /* Full rounded pill */
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.btn-download-cv:hover {
+    background-color: var(--primary-green, #237756);
+    transform: translateY(-1.5px);
+}
+
+/* Responsive collapse spacing for smaller screens */
+@media (max-width: 1100px) {
+    .nav-menu {
+        gap: 16px;
+    }
+
+    .nav-link {
+        font-size: 0.82rem;
+    }
+}
+
+/* --- HERO SECTION --- */
+/* Bottom fade overlay for Light Mode */
+.hero-section {
+    width: 100%;
+    position: relative;
+    background-image:
+        linear-gradient(to bottom, rgba(255, 255, 255, 0) 90%, #f7faf8 100%),
+        url('../Resources/Text_removed_topBG-Picsart-AiImageEnhancer.png');
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+    padding: 50px 0;
+}
+
+/* Update this in css/style.css */
+.hero-container {
+    max-width: 1700px;
+    /* Opens up the max width across the whole page */
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 50px;
+    /* Controls distance from the left edge for ALL sections */
+    padding-right: 50px;
+}
+
+.hero-content {
+    max-width: 480px;
+}
+
+.greeting {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.25rem;
+}
+
+.name {
+    font-size: 3.25rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.bio {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+/* Buttons */
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0.75rem 1.6rem;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary-green);
+    color: #ffffff;
+    border: 1.5px solid var(--primary-green);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-green-hover);
+    border-color: var(--primary-green-hover);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-green);
+    border: 1.5px solid var(--primary-green);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(35, 119, 86, 0.08);
+}
+
+.btn-icon {
+    flex-shrink: 0;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 2px;
+    /* Fine-tunes alignment with button edge */
+}
+
+.social-links a {
+    color: var(--text-dark);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(35, 119, 86, 0.08);
+    /* Soft matching background */
+    transition: all 0.25s ease;
+}
+
+.social-links a:hover {
+    background-color: var(--primary-green);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.social-links svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Responsive Rules */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+        background-position: center;
+    }
+
+    .name {
+        font-size: 2.5rem;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+}
+
+/* --- ABOUT / RESEARCH SECTION --- */
+.about-section {
+    padding: 90px 0;
+    background-color: #ffffff;
+    /* Clean contrast below the light hero background */
+}
+
+.research-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+}
+
+.research-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.4rem;
+}
+
+.research-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+/* ==========================================
+   ABOUT ME SECTION STYLES
+   ========================================== */
+.about-section {
+    padding: 80px 0;
+    background-color: #f7faf8;
+}
+
+/* --- Top Area (Image + Bio) --- */
+.about-top-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+/* Image Wrapper & Circle Frame */
+.about-image-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-circle-container {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background-color: #d8eee5;
+    padding: 12px;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.03);
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #e2f3ed;
+}
+
+/* Microscope Badge */
+.badge-icon {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background-color: #cdecd8;
+    color: #237756;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Bio Content Side */
+.section-tag-block {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.tag-icon-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #d8eee5;
+    color: #237756;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-tag {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #237756;
+}
+
+.about-name {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #172b25;
+    margin-bottom: 4px;
+    line-height: 1.2;
+}
+
+.about-role {
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #237756;
+    margin-bottom: 24px;
+}
+
+.bio-paragraphs p {
+    font-size: 0.98rem;
+    line-height: 1.65;
+    color: #4a5d56;
+    margin-bottom: 14px;
+}
+
+.bio-paragraphs p:last-child {
+    margin-bottom: 0;
+}
+
+/* --- Bottom Area (4 Cards) --- */
+.about-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.about-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 32px 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    border: 1px solid #eef4f1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(35, 119, 86, 0.08);
+}
+
+/* Card Icons */
+.card-icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #e4f4ed;
+    color: #237756;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px auto;
+}
+
+.card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #172b25;
+    margin-bottom: 8px;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #5d7069;
+    line-height: 1.4;
+}
+
+.card-highlight {
+    display: inline-block;
+    font-size: 0.88rem;
+    color: #237756;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+    .about-top-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .section-tag-block {
+        justify-content: center;
+    }
+
+    .about-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .about-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-circle-container {
+        width: 260px;
+        height: 260px;
+    }
+}
+
+/* ============================================================
+    LABORATORY SKILLS SECTION
+   ============================================================ */
+
+.skills-section {
+    width: 100%;
+    padding: 70px 0;
+    background-color: #fafdca0a;
+    /* Subtle soft match with body theme */
+}
+
+/* Centered Header & Green Underline Bar */
+.skills-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.skills-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    color: var(--text-dark);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.skills-underline {
+    width: 36px;
+    height: 3px;
+    background-color: var(--primary-green);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* Carousel Outer Flex Layout */
+.skills-carousel-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+
+/* Arrow Navigation Buttons */
+.carousel-arrow {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(35, 119, 86, 0.4);
+    background-color: #ffffff;
+    color: var(--primary-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: all 0.25s ease;
+    z-index: 5;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+}
+
+.carousel-arrow:hover {
+    background-color: var(--primary-green);
+    color: #ffffff;
+    border-color: var(--primary-green);
+    transform: scale(1.08);
+}
+
+/* Scrollable Inner Track */
+.skills-track {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 5px;
+    width: 100%;
+
+    /* Hide standard scrollbars for a clean custom look */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge */
+}
+
+.skills-track::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari/Opera */
+}
+
+/* Individual Skill Card Circle + Label */
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+    /* Maintains shape during overflow scroll */
+    text-align: center;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-4px);
+}
+
+.skill-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid rgba(35, 119, 86, 0.25);
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-green);
+    margin-bottom: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+    transition: all 0.25s ease;
+}
+
+.skill-item:hover .skill-circle {
+    border-color: var(--primary-green);
+    box-shadow: 0 6px 16px rgba(35, 119, 86, 0.15);
+    background-color: #f4f9f6;
+}
+
+.skill-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    line-height: 1.35;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .skills-track {
+        gap: 20px;
+    }
+
+    .skill-circle {
+        width: 68px;
+        height: 68px;
+    }
+
+    .skill-item {
+        min-width: 85px;
+    }
+}
+
+/* ============================================================
+   JOURNEY SO FAR / TIMELINE SECTION
+   ============================================================ */
+
+.journey-section {
+    width: 100%;
+    padding: 80px 0 100px 0;
+    background-color: #ffffff;
+}
+
+/* Centered Header & Underline */
+.journey-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.journey-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    color: var(--text-dark);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.journey-underline {
+    width: 36px;
+    height: 3px;
+    background-color: var(--primary-green);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* Timeline Track & Line Container */
+.timeline-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Continuous Horizontal Line Behind Dots */
+.timeline-line {
+    position: absolute;
+    top: 113px;
+    /* Changed from 98px (98px + 15px) */
+    left: calc(100% / 8 / 2);
+    right: calc(100% / 8 / 2);
+    height: 2px;
+    background-color: var(--primary-green);
+    z-index: 1;
+}
+
+/* Flex distribution for timeline items */
+.timeline-track {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    z-index: 2;
+    overflow-x: auto;
+    overflow-y: visible;
+    /* Prevents vertical clipping on hover */
+    padding-top: 15px;
+    /* Gives room for translateY(-4px) and shadow */
+    padding-bottom: 10px;
+    scrollbar-width: none;
+}
+
+.timeline-track::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
+/* Individual Timeline Node */
+/* UPDATED: Dynamic item width */
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1 1 0px;
+    /* Distributes all 8 items completely evenly */
+    padding: 0 6px;
+    min-width: 0;
+    /* Prevents flex items from clipping overflow */
+    transition: transform 0.25s ease;
+}
+
+.timeline-item:hover {
+    transform: translateY(-4px);
+}
+
+/* Top Icon Circle Badge */
+.timeline-icon-circle {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: 1px solid rgba(35, 119, 86, 0.25);
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-green);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+    transition: all 0.25s ease;
+}
+
+.timeline-item:hover .timeline-icon-circle {
+    border-color: var(--primary-green);
+    background-color: #f4f9f6;
+    box-shadow: 0 6px 16px rgba(35, 119, 86, 0.12);
+}
+
+/* Solid Green Dot on Line */
+.timeline-dot {
+    width: 16px;
+    height: 16px;
+    background-color: var(--primary-green);
+    border-radius: 50%;
+    margin: 18px 0 16px 0;
+    box-shadow: 0 0 0 4px #ffffff;
+    /* Gives clean cutout spacing over the line */
+    z-index: 3;
+}
+
+/* Year Title */
+.timeline-year {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+/* Description Text */
+.timeline-desc {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Mobile Responsiveness: Stacks Vertically on Small Screens */
+@media (max-width: 768px) {
+    .timeline-line {
+        top: 0;
+        bottom: 0;
+        left: 36px;
+        right: auto;
+        width: 2px;
+        height: 100%;
+    }
+
+    .timeline-track {
+        flex-direction: column;
+        gap: 35px;
+        padding-left: 10px;
+    }
+
+    .timeline-item {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+    }
+
+    .timeline-dot {
+        margin: 0 20px 0 15px;
+    }
+
+    .timeline-year,
+    .timeline-desc {
+        text-align: left;
+    }
+
+    .timeline-desc br {
+        display: none;
+    }
+}
+
+/* ============================================================
+    CONTACT & FOOTER SECTION (UPDATED)
+   ============================================================ */
+
+/* --- HAMBURGER MENU DEFAULT (HIDDEN ON DESKTOP) --- */
+.hamburger-menu {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--text-dark);
+    cursor: pointer;
+    padding: 6px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+}
+
+/* --- CONTACT & FOOTER SECTION (FIXED ALIGNMENT) --- */
+.contact-footer {
+    width: 100%;
+    padding: 60px 0 30px 0;
+    color: #ffffff;
+    position: relative;
+    background-image: url('../Resources/BottomBG_2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #072620;
+}
+
+/* --- MOBILE & TABLET MEDIA QUERIES --- */
+@media (max-width: 768px) {
+
+    /* 1. Hamburger menu visible on mobile screens only */
+    .hamburger-menu {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-light);
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        gap: 20px;
+    }
+
+    body.dark-mode .nav-links {
+        background-color: #1E1F20;
+        border-bottom: 1px solid #333538;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+    }
+
+    .nav-actions {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* 2. Contact Section Stack */
+    .contact-grid {
+        grid-template-columns: 1fr !important;
+        gap: 30px;
+        margin-left: 0 !important;
+    }
+}
+
+/* Base Desktop Layout (Margins Cleared) */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 320px 420px; /* Fixed tight widths instead of 1.1fr / 0.9fr */
+    gap: 24px; /* Reduced gap between info & form */
+    align-items: start;
+    margin: 0 auto 40px 30vw; /* Centers the whole block horizontally */
+    max-width: 800px; /* Restricts layout width to stay inside dark gap */
+    padding-left: 60px; /* Fine-tunes horizontal offset past the microscope */
+}
+
+.contact-info {
+    margin-left: 0;
+}
+
+/* Left Column Styling */
+.contact-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+.contact-underline {
+    width: 36px;
+    height: 3px;
+    background-color: var(--primary-green, #237756);
+    margin-bottom: 18px;
+    border-radius: 2px;
+}
+
+.contact-desc {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 25px;
+    max-width: 360px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-item svg {
+    color: #3ba776;
+    flex-shrink: 0;
+}
+
+/* Form Styling - Made Shorter */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 420px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+/* Shorter Inputs */
+.form-input {
+    width: 100%;
+    padding: 10px 14px;
+    /* Reduced vertical padding */
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.form-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form-input:focus {
+    border-color: #3ba776;
+    background: rgba(255, 255, 255, 0.14);
+}
+
+/* Shorter Message Box */
+.form-textarea {
+    resize: none;
+    /* Blocks manual dragging/stretching */
+    height: 100px;
+    /* Fixed height for the box */
+    overflow-y: auto;
+    /* Automatically adds internal scrollbar when text overflows */
+}
+
+.contact-submit-btn {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    /* Shorter button */
+    background-color: var(--primary-green, #237756);
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+    margin-top: 4px;
+}
+
+.contact-submit-btn:hover {
+    background-color: #1c6146;
+    transform: translateY(-2px);
+}
+
+/* Bottom Bar */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+
+    /* ============================================================
+     LINE COMMENTED OUT BELOW:
+     ============================================================ */
+    /* border-top: 1px solid rgba(255, 255, 255, 0.12); */
+
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.copyright,
+.footer-tagline {
+    margin: 0;
+}
+
+/* Controlled responsive layout preventing background image overlaps */
+@media (max-width: 1200px) {
+    .contact-grid {
+        margin-left: 0;
+        padding: 0 20px;
+    }
+}
+
+/* Mobile & Tablet Overrides */
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr !important;
+        gap: 30px;
+        margin-left: 0 !important;
+        padding: 0 20px;
+    }
+
+    .contact-info {
+        margin-left: 0 !important;
+    }
+
+    .contact-desc {
+        max-width: 100%;
+    }
+
+    .contact-form {
+        max-width: 100%;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr; /* Stacks Name & Email fields vertically on mobile */
+    }
+}
+
+/* ============================================================
+   CERTIFICATES SECTION
+   ============================================================ */
+
+.certificates-section {
+    width: 100%;
+    padding: 80px 0;
+    background-color: #fafdca0a;
+    /* Same background color as Lab Skills section */
+}
+
+.certificates-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.certificates-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    color: var(--text-dark, #1a2b25);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.certificates-underline {
+    width: 36px;
+    height: 3px;
+    background-color: var(--primary-green, #237756);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* Carousel Outer Container */
+.certs-carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Scrollable Track (Fixed Viewport for Exactly 4 Cards) */
+.certs-track {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding: 10px 0;
+    /* Removed horizontal 5px padding to fix pixel alignment */
+    width: 1272px;
+    /* Exact width: (4 x 300px cards) + (3 x 24px gaps) */
+    max-width: 100%;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.certs-track::-webkit-scrollbar {
+    display: none;
+}
+
+/* Certificate Button Card */
+.cert-card-button {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border-radius: 14px;
+    overflow: hidden;
+    flex-shrink: 0;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    scroll-snap-align: start;
+    /* Clean snap target */
+}
+
+.cert-card-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(35, 119, 86, 0.18);
+}
+
+/* Background Certificate Image Fill */
+.cert-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* White Text Overlay Box */
+.cert-overlay {
+    position: relative;
+    z-index: 2;
+    height: 48%;
+    width: 100%;
+    background: #ffffff;
+    /* Clean solid white background */
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 2px solid var(--primary-green);
+    text-align: left;
+}
+
+.cert-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 3px;
+    line-height: 1.25;
+}
+
+.cert-org {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--primary-green);
+}
+
+/* ============================================================
+    PROJECTS SECTION (3 x 3 x 2 GRID)
+   ============================================================ */
+
+.projects-section {
+    width: 100%;
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.projects-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.projects-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    color: var(--text-dark, #1a2b25);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.projects-underline {
+    width: 36px;
+    height: 3px;
+    background-color: var(--primary-green, #237756);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* 3-column grid: 8 items naturally form 3 in row 1, 3 in row 2, 2 in row 3 */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: flex-start; /* Aligns the grid items to the left edge */
+}
+
+/* Base Placeholder Card Style */
+.project-card {
+    width: 100%;
+    height: 220px;
+    background-color: var(--primary-green, #237756);
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(35, 119, 86, 0.15);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(35, 119, 86, 0.28);
+}
+
+/* Responsive adjustment for tablet/mobile screens */
+@media (max-width: 900px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Certificate Modal & Blur Backdrop */
+.cert-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.cert-modal.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.cert-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 18, 0.65);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.cert-modal-card {
+    position: relative;
+    background: #ffffff;
+    width: 92%;
+    max-width: 1100px;
+    /* Increased from 820px for high visibility */
+    max-height: 90vh;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    z-index: 2001;
+    overflow-y: auto;
+    padding: 36px;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    /* Gives more width to the certificate image */
+    gap: 32px;
+}
+
+.cert-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: #0d5c3a;
+    color: #ffffff;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    /* Centering fix */
+    align-items: center;
+    /* Centering fix */
+    justify-content: center;
+    /* Centering fix */
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s ease, transform 0.2s ease;
+    z-index: 2002;
+}
+
+.cert-modal-close:hover {
+    background: #084028;
+    transform: scale(1.05);
+}
+
+.cert-modal-img-wrapper {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cert-modal-img-wrapper img {
+    width: 100%;
+    max-height: 65vh;
+    /* Increased from 360px so the certificate image expands fully */
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.cert-modal-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.cert-modal-org {
+    font-size: 12px;
+    font-weight: 700;
+    color: #0d5c3a;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+.cert-modal-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-top: 4px;
+}
+
+.cert-modal-divider {
+    border: 0;
+    height: 1px;
+    background: #e2e8f0;
+    margin: 16px 0;
+}
+
+.cert-modal-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.cert-modal-text {
+    font-size: 14px;
+    color: #334155;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .cert-modal-card {
+        grid-template-columns: 1fr;
+        padding: 24px;
+    }
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+    background: transparent;
+    border: 1px solid #cbd5e1;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #1e293b;
+    transition: all 0.25s ease;
+}
+
+.theme-toggle-btn:hover {
+    background: #f1f5f9;
+    color: #0d5c3a;
+    border-color: #0d5c3a;
+}
+
+/* Icon Visibility Rules */
+.sun-icon {
+    display: none;
+}
+
+.moon-icon {
+    display: block;
+}
+
+body.dark-mode .sun-icon {
+    display: block;
+}
+
+body.dark-mode .moon-icon {
+    display: none;
+}
+
+/* ==========================================================================
+   FULL PAGE DARK MODE THEME (#1E1F20 Base)
+   ========================================================================== */
+
+/* Main Body & Layout */
+body.dark-mode {
+    background-color: #1E1F20;
+    color: #e3e2e0;
+}
+
+/* Navbar */
+body.dark-mode .navbar {
+    background-color: rgba(30, 31, 32, 0.94);
+    border-bottom: 1px solid #2d2f31;
+}
+
+body.dark-mode .nav-link {
+    color: #c4c7c5;
+}
+
+body.dark-mode .nav-link:hover,
+body.dark-mode .nav-link.active {
+    color: #4ade80;
+}
+
+body.dark-mode .btn-download-cv {
+    background-color: #0d5c3a;
+    color: #ffffff;
+}
+
+/* Headings & Text Contrast */
+body.dark-mode .name,
+body.dark-mode .about-name,
+body.dark-mode .logo-text,
+body.dark-mode .card-title,
+body.dark-mode .skills-title,
+body.dark-mode .projects-title,
+body.dark-mode .certificates-title,
+body.dark-mode .journey-title,
+body.dark-mode .contact-title,
+body.dark-mode .timeline-year,
+body.dark-mode .skill-name {
+    color: #f1f2f4;
+}
+
+body.dark-mode .greeting,
+body.dark-mode .title,
+body.dark-mode .bio,
+body.dark-mode .about-role,
+body.dark-mode .bio-paragraphs p,
+body.dark-mode .card-text,
+body.dark-mode .contact-desc,
+body.dark-mode .contact-item span,
+body.dark-mode .timeline-desc,
+body.dark-mode .copyright,
+body.dark-mode .footer-tagline {
+    color: #9ca3af;
+}
+
+/* Cards, Skill Circles & Containers */
+body.dark-mode .about-card,
+body.dark-mode .skill-circle,
+body.dark-mode .project-card,
+body.dark-mode .contact-footer,
+body.dark-mode .form-input {
+    background-color: #28292a;
+    border: 1px solid #333538;
+    color: #e3e2e0;
+}
+
+body.dark-mode .card-icon-circle,
+body.dark-mode .tag-icon-circle,
+body.dark-mode .badge-icon,
+body.dark-mode .timeline-icon-circle {
+    background-color: #1e1f20;
+    border: 1px solid #333538;
+    color: #4ade80;
+}
+
+/* Form Inputs */
+body.dark-mode .form-input::placeholder {
+    color: #80868b;
+}
+
+body.dark-mode .form-input:focus {
+    border-color: #4ade80;
+    background-color: #2d2f31;
+}
+
+/* Certificate Modal */
+body.dark-mode .cert-modal-card {
+    background-color: #28292a;
+    border: 1px solid #333538;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+}
+
+body.dark-mode .cert-modal-img-wrapper {
+    background-color: #1e1f20;
+    border-color: #333538;
+}
+
+body.dark-mode .cert-modal-title,
+body.dark-mode .cert-modal-text {
+    color: #f1f2f4;
+}
+
+body.dark-mode .cert-modal-org {
+    color: #4ade80;
+}
+
+body.dark-mode .cert-modal-label {
+    color: #9ca3af;
+}
+
+body.dark-mode .cert-modal-divider {
+    background-color: #333538;
+}
+
+body.dark-mode .cert-modal-close {
+    background-color: #333538;
+    color: #f1f2f4;
+}
+
+body.dark-mode .cert-modal-close:hover {
+    background-color: #4ade80;
+    color: #1e1f20;
+}
+
+/* Buttons, Arrows & Social Links */
+body.dark-mode .btn-secondary,
+body.dark-mode .carousel-arrow {
+    background-color: #28292a;
+    border: 1px solid #333538;
+    color: #e3e2e0;
+}
+
+body.dark-mode .carousel-arrow:hover {
+    background-color: #4ade80;
+    color: #1e1f20;
+}
+
+body.dark-mode .social-links a {
+    color: #c4c7c5;
+    border: 1px solid #333538;
+    background-color: #28292a;
+}
+
+body.dark-mode .social-links a:hover {
+    color: #4ade80;
+    border-color: #4ade80;
+}
+
+/* Theme Toggle Button */
+body.dark-mode .theme-toggle-btn {
+    border-color: #333538;
+    color: #f1f2f4;
+}
+
+body.dark-mode .theme-toggle-btn:hover {
+    background-color: #28292a;
+    color: #4ade80;
+    border-color: #4ade80;
+}
+
+/* Apply dark background to all main body sections */
+body.dark-mode .hero-section,
+body.dark-mode .about-section,
+body.dark-mode .skills-section,
+body.dark-mode .projects-section,
+body.dark-mode .certificates-section,
+body.dark-mode .journey-section {
+    background-color: #1E1F20;
+}
+
+/* Profile circle container in About section */
+body.dark-mode .profile-circle-container {
+    background-color: #28292a;
+}
+
+/* Timeline background line in Journey section */
+body.dark-mode .timeline-line {
+    background-color: #333538;
+}
+
+/* Skill and certificate tracks */
+body.dark-mode .skill-circle,
+body.dark-mode .cert-card-button {
+    background-color: #28292a;
+    border-color: #333538;
+}
+
+body.dark-mode .cert-overlay {
+    background-color: #28292a;
+}
+
+/* ==========================================================================
+   DARK MODE OVERRIDES & FIXES
+   ========================================================================== */
+
+/* 1. Hero section text visibility over light background image */
+body.dark-mode .hero-section .greeting,
+body.dark-mode .hero-section .name,
+body.dark-mode .hero-section .title,
+body.dark-mode .hero-section .bio {
+    color: #ffffff !important;
+}
+
+/* 2. Translucent Contact Form inputs matching footer background */
+body.dark-mode .form-input {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+}
+
+body.dark-mode .form-input::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+body.dark-mode .form-input:focus {
+    background: rgba(255, 255, 255, 0.14) !important;
+    border-color: #4ade80 !important;
+}
+
+/* 3. Skills & Journey Hover: Subtle green border glow without turning white */
+body.dark-mode .skill-item:hover .skill-circle,
+body.dark-mode .timeline-item:hover .timeline-icon-circle {
+    background-color: #28292a !important;
+    border-color: #4ade80 !important;
+    box-shadow: 0 0 12px rgba(74, 222, 128, 0.3) !important;
+}
+
+/* 4. Certificate Cards text contrast */
+body.dark-mode .cert-overlay {
+    background-color: #28292a !important;
+}
+
+body.dark-mode .cert-title {
+    color: #f1f2f4 !important;
+}
+
+body.dark-mode .cert-org {
+    color: #4ade80 !important;
+}
+
+/* Smoothly fade the bottom of the hero image into the dark background */
+body.dark-mode .hero-section {
+    background-image:
+        linear-gradient(to bottom, rgba(30, 31, 32, 0) 95%, #1E1F20 100%),
+        url('../Resources/DarkMode_HeroBG.jpeg') !important;
+}
+
+/* Change modal overlay background to pure neutral dark gray/black */
+.cert-modal-backdrop {
+    background: rgba(0, 0, 0, 0.75) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* Clean, lag-free dark modal backdrop */
+.cert-modal-backdrop {
+    background: rgba(0, 0, 0, 0.8) !important;
+}
+
+.more-content.hidden {
+    display: none;
+}
+
+.more-content {
+    margin-top: 1rem;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+#toggle-about-btn {
+    margin-top: 1.5rem;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keep image aligned at top when text expands */
+.about-top-grid {
+    align-items: flex-start;
+}
+
+/* Smooth Height Expansion via CSS Grid */
+.expandable-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.expandable-wrapper.expanded {
+    grid-template-rows: 1fr;
+}
+
+.expandable-inner {
+    overflow: hidden;
+}
+
+/* Custom Pill Button Styling matching image */
+.pill-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: #1b7a53;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.75rem 1.75rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    margin-top: 1.25rem;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.pill-btn:hover {
+    background-color: #156242;
+    transform: translateY(-1px);
+}
+
+.pill-btn .btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+/* Icon rotation on toggle open */
+.pill-btn.open .btn-icon {
+    transform: rotate(90deg);
+}
+
+/* Mobile Responsive Media Query */
+@media (max-width: 768px) {
+
+    /* Navigation adjustments */
+    .nav-container {
+        padding: 10px 20px;
+    }
+
+    .nav-links {
+        display: none;
+        /* Hide default navbar links on small screens */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-color);
+        padding: 20px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+        /* Toggle display via mobile menu button */
+    }
+
+    .hamburger-menu {
+        display: block;
+        /* Show hamburger button on mobile */
+        cursor: pointer;
+    }
+
+    /* Grid layouts collapse to single column */
+    .about-top-grid,
+    .about-cards-grid,
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Typography & spacing scaling */
+    .hero-title,
+    .about-name {
+        font-size: 2rem;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+    }
+
+    .section-padding {
+        padding: 40px 20px;
+    }
+}
+
+/* ==========================================
+   MOBILE & TABLET RESPONSIVE STYLES
+   ========================================== */
+
+@media (max-width: 768px) {
+
+    /* 1. Prevent Horizontal Page Overflow */
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    /* 2. Stack Grid Layouts into Single Columns */
+    .about-top-grid,
+    .projects-grid,
+    .skills-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+    }
+
+    /* 3. Scale Profile Image Dynamically */
+    .about-image img,
+    .profile-img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* 4. Touch-Friendly Buttons */
+    .pill-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.85rem 1.5rem;
+    }
+
+    /* 5. Touch Scroll for Tracks */
+    .carousel-track,
+    #skillsTrack,
+    #certsTrack {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 0.75rem;
+    }
+
+    .skill-item,
+    .cert-card-button {
+        scroll-snap-align: start;
+    }
+
+    /* 6. Mobile Modal Adjustments */
+    .modal-content {
+        width: 92%;
+        margin: 5% auto;
+        padding: 1.25rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    /* 1. Fix Hamburg Menu Overlay Background & Visibility */
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        /* Positions menu right below the header */
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        /* Gives menu a solid background (use #0f172a or similar for dark mode) */
+        z-index: 1000;
+        /* Ensures menu sits on top of all page content */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+        /* Layout styling for mobile links */
+        display: none;
+        /* Hidden by default, toggle with .active in JS */
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem 0;
+    }
+
+    /* Keep displayed when JS toggles active class */
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* 2. Hide Desktop "Contact Me" Button on Mobile */
+    .header .contact-btn,
+    .nav-container .contact-btn {
+        display: none !important;
+    }
+}
+
+/* ============================================================
+    PROJECT CARD BUTTONS & OVERLAYS
+   ============================================================ */
+
+.project-card-button {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    border-radius: 14px;
+    overflow: hidden;
+    flex-shrink: 0;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: 0;
+}
+
+.project-card-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(35, 119, 86, 0.18);
+}
+
+.project-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.project-overlay {
+    position: relative;
+    z-index: 2;
+    height: 48%;
+    width: 100%;
+    background: #ffffff;
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 2px solid var(--primary-green, #237756);
+    text-align: left;
+}
+
+.project-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-dark, #1a2b25);
+    margin-bottom: 3px;
+    line-height: 1.25;
+}
+
+.project-org {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--primary-green, #237756);
+}
+
+/* ============================================================
+    PROJECT MODAL STYLES
+   ============================================================ */
+
+.project-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.project-modal.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.project-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 18, 0.65);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.project-modal-card {
+    position: relative;
+    background: #ffffff;
+    width: 92%;
+    max-width: 1100px;
+    max-height: 90vh;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    z-index: 2001;
+    overflow-y: auto;
+    padding: 36px;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 32px;
+}
+
+.project-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: #0d5c3a;
+    color: #ffffff;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s ease, transform 0.2s ease;
+    z-index: 2002;
+}
+
+.project-modal-close:hover {
+    background: #084028;
+    transform: scale(1.05);
+}
+
+.project-modal-img-wrapper {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-modal-img-wrapper img {
+    width: 100%;
+    max-height: 65vh;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.project-modal-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-modal-org {
+    font-size: 12px;
+    font-weight: 700;
+    color: #0d5c3a;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+.project-modal-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-top: 4px;
+}
+
+.project-modal-divider {
+    border: 0;
+    height: 1px;
+    background: #e2e8f0;
+    margin: 16px 0;
+}
+
+.project-modal-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.project-modal-text {
+    font-size: 14px;
+    color: #334155;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .project-modal-card {
+        grid-template-columns: 1fr;
+        padding: 24px;
+    }
+}
+
+/* --- Dark Mode Additions for Project Modal & Cards --- */
+body.dark-mode .project-card-button {
+    background-color: #28292a;
+    border: 1px solid #333538;
+}
+
+body.dark-mode .project-overlay {
+    background-color: #28292a;
+    border-top: 2px solid #4ade80;
+}
+
+body.dark-mode .project-title {
+    color: #f1f2f4;
+}
+
+body.dark-mode .project-org {
+    color: #4ade80;
+}
+
+body.dark-mode .project-modal-card {
+    background-color: #28292a;
+    border: 1px solid #333538;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+}
+
+body.dark-mode .project-modal-img-wrapper {
+    background-color: #1e1f20;
+    border-color: #333538;
+}
+
+body.dark-mode .project-modal-title,
+body.dark-mode .project-modal-text {
+    color: #f1f2f4;
+}
+
+body.dark-mode .project-modal-org {
+    color: #4ade80;
+}
+
+body.dark-mode .project-modal-label {
+    color: #9ca3af;
+}
+
+body.dark-mode .project-modal-divider {
+    background-color: #333538;
+}
+
+body.dark-mode .project-modal-close {
+    background-color: #333538;
+    color: #f1f2f4;
+}
+
+body.dark-mode .project-modal-close:hover {
+    background-color: #4ade80;
+    color: #1e1f20;
+}
+
+/* Collapsible Container */
+/* Base hidden state */
+/* Updated Collapsible Container Rules */
+.expandable-wrapper {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    margin-top: 0;
+    /* Clean transition for both expanding and collapsing */
+    transition: max-height 0.4s cubic-bezier(0, 1, 0, 1), 
+                opacity 0.3s ease-in-out, 
+                margin-top 0.3s ease-in-out;
+}
+
+.expandable-wrapper.expanded {
+    max-height: 500px; /* Reduced from 1000px to prevent collapse delay */
+    opacity: 1;
+    margin-top: 14px;
+    transition: max-height 0.4s ease-in-out, 
+                opacity 0.4s ease-in-out, 
+                margin-top 0.4s ease-in-out;
+}
+
+.expandable-wrapper.active {
+    max-height: 1000px; /* Ensure this is larger than your expanded text height */
+    opacity: 1;
+    margin-top: 14px;
+}
+
+/* Pill Button Icon Animation */
+.pill-btn .btn-icon {
+    transition: transform 0.3s ease;
+}
+
+.pill-btn.expanded .btn-icon {
+    transform: rotate(90deg);
+}
+
+/* Experiment Section Grouping */
+.experiment-group {
+    margin-bottom: 50px;
+}
+
+.experiment-group:last-child {
+    margin-bottom: 0;
+}
+
+.experiment-header {
+    margin-bottom: 20px;
+    padding-left: 4px;
+    border-left: 4px solid var(--primary-green, #237756);
+    padding-left: 12px;
+}
+
+.experiment-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-dark, #1a2b25);
+    margin-bottom: 4px;
+}
+
+.experiment-subtitle {
+    font-size: 0.9rem;
+    color: var(--text-muted, #5d7069);
+}
+
+/* Dark Mode Styles for Experiment Headings */
+body.dark-mode .experiment-title {
+    color: #f1f2f4;
+}
+
+body.dark-mode .experiment-subtitle {
+    color: #9ca3af;
+}
+
+body.dark-mode .experiment-header {
+    border-left-color: #4ade80;
+}

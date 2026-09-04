@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pallavi Sahu | Portfolio</title>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M5 21h14'/><path d='M6 18h2'/><path d='M7 18v3'/><path d='M9 11l3 3l6 -6l-3 -3z'/><path d='M10.5 12.5l-1.5 1.5'/><path d='M17 3l3 3'/><path d='M12 21a6 6 0 0 0 3.715 -10.712'/></svg>">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <!-- NAVIGATION HEADER -->
+    <header class="navbar">
+        <div class="hero-container nav-container">
+
+            <!-- Logo Block -->
+            <a href="#home" class="nav-logo">
+                <svg class="logo-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M17 3v1c-.01 3.352 -1.68 6.023 -5.008 8.014c-3.328 1.99 3.336 -2 .008 -.014c-3.328 1.99 -5 4.662 -5.008 8.014v1" />
+                    <path
+                        d="M17 21.014v-1c-.01 -3.352 -1.68 -6.023 -5.008 -8.014c-3.328 -1.99 3.336 2 .008 .014c-3.328 -1.991 -5 -4.662 -5.008 -8.014v-1" />
+                    <path d="M7 4h10" />
+                    <path d="M7 20h10" />
+                    <path d="M8 8h8" />
+                    <path d="M8 16h8" />
+                </svg>
+                <span class="logo-text">BioPortfolio.</span>
+            </a>
+
+            <!-- Hamburger Icon (Mobile Only) -->
+            <button class="hamburger-menu" id="hamburgerMenu" aria-label="Toggle Navigation Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+
+            <!-- Navigation & Actions Container -->
+            <div class="nav-links" id="navLinks">
+                <nav class="nav-menu">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About Me</a>
+                    <a href="#skills" class="nav-link">Lab Skills</a>
+                    <a href="#projects" class="nav-link">Lab tests</a>
+                    <a href="#certificates" class="nav-link">Certificates</a>
+                    <a href="#journey" class="nav-link">Journey</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
+
+                <div class="nav-actions">
+                    <!-- Dark Mode Toggle Button -->
+                    <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle dark mode">
+                        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Download CV Action Button -->
+                    <a href="Resources/htmlcheatsheet.pdf" download class="btn-download-cv">
+                        <span>Download CV</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- HERO / HOME SECTION -->
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <p class="greeting">Hi, I'm</p>
+                    <h1 class="name">Pallavi Sahu</h1>
+                    <p class="title">BIOTECHNOLOGY STUDENT</p>
+                    <p class="bio">
+                        Passionate about exploring the wonders of life at the molecular and cellular level and using
+                        biotechnology to create a better tomorrow.
+                    </p>
+
+                    <!-- Buttons -->
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            Explore My Work
+                            <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                            </svg>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            Contact Me
+                            <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="social-links">
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/919157801325" target="_blank" rel="noopener noreferrer"
+                            aria-label="WhatsApp">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />
+                                <path
+                                    d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1" />
+                            </svg>
+                        </a>
+
+                        <!-- Email -->
+                        <a href="mailto:pspallavisahu01@gmail.com" aria-label="Email">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect width="20" height="16" x="2" y="4" rx="2" />
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                            </svg>
+                        </a>
+
+                        <!-- X / Twitter -->
+                        <a href="https://x.com/pearl__we" target="_blank" rel="noopener noreferrer"
+                            aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT ME SECTION -->
+        <section id="about" class="about-section">
+            <div class="hero-container">
+
+                <!-- TOP GRID: Image Frame + Bio Text -->
+                <div class="about-top-grid">
+
+                    <!-- Profile Image Frame (Fixed at top alignment) -->
+                    <div class="about-image-wrapper">
+                        <div class="profile-circle-container">
+                            <img src="Resources/pfp.jpeg" alt="Pallavi Sahu" class="profile-img">
+
+                            <div class="badge-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M6 18h8M3 22h14M12 6a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM11 2a4 4 0 0 0-4 4">
+                                    </path>
+                                    <path d="M7 6l3 11a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1l3-11"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bio Details Content -->
+                    <div class="about-bio-content">
+                        <div class="section-tag-block">
+                            <div class="tag-icon-circle">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M17 3v1c-.01 3.352 -1.68 6.023 -5.008 8.014c-3.328 1.99 3.336 -2 .008 -.014c-3.328 1.99 -5 4.662 -5.008 8.014v1" />
+                                    <path
+                                        d="M17 21.014v-1c-.01 -3.352 -1.68 -6.023 -5.008 -8.014c-3.328 -1.99 3.336 2 .008 .014c-3.328 -1.991 -5 -4.662 -5.008 -8.014v-1" />
+                                    <path d="M7 4h10" />
+                                    <path d="M7 20h10" />
+                                    <path d="M8 8h8" />
+                                    <path d="M8 16h8" />
+                                </svg>
+                            </div>
+                            <span class="section-tag">ABOUT ME</span>
+                        </div>
+
+                        <h2 class="about-name">Pallavi Sahu</h2>
+                        <p class="about-role">BIOTECHNOLOGY STUDENT</p>
+
+                        <div class="bio-paragraphs">
+                            <p>I'm currently pursuing my M.Sc. in Biotechnology at DAVV, Indore, with a growing interest
+                                in Molecular & Computational biology, RDT, and Biological data analysis.</p>
+                            <p>My interest in biotechnology started with something surprisingly small: DNA. I've always
+                                found it fascinating how a tiny molecular change can have such a huge effect on an
+                                organism. The idea of understanding these changes and eventually designing treatments
+                                around the specific needs of a patient is what drew me toward biotechnology.</p>
+                            <p>I originally wanted to become a doctor, but not qualifying it, I started looking at
+                                biotechnology differently. I realised there were other ways to work toward understanding
+                                disease, developing treatments, and improving people's lives.</p>
+
+                            <!-- Collapsible Grid Container -->
+                            <div id="more-about" class="expandable-wrapper">
+                                <div class="expandable-inner">
+                                    <p>Over time, my interests moved toward Molecular biology, Drug design, and
+                                        Computational biology. The idea of using 3D models, sequence analysis, genomics,
+                                        and biological datasets to explore problems that may be difficult to approach
+                                        experimentally really caught my attention.</p>
+                                    <p>My biological strengths include Molecular biology, Cell biology, Immunology,
+                                        Biochemistry, and RDT. I've had practical exposure to PCR, DNA/RNA isolation and
+                                        quantification, SDS-PAGE, Gel electrophoresis, ELISA, Blotting techniques
+                                        through university training, workshops, and internships.</p>
+                                    <p>The computational side of my profile is still under construction. I've had
+                                        introductory exposure to FASTA, BLAST, and Clustal through an NPTEL-SWAYAM
+                                        course, and I'm now working toward learning Bioinformatics, Biological data
+                                        analysis, Genomics, Sequence analysis, and ML applications in biology.</p>
+                                    <p>I'm naturally curious and like figuring things out both independently and with a
+                                        team. Outside academics, I enjoy discovering new music, indie artists, and
+                                        falling into completely unnecessary internet rabbit holes. I'm still early in
+                                        the journey, but I have a better idea of where I want to go.</p>
+                                    <p>I'd love to connect with people who share a similar curiosity for biology,
+                                        technology, research, or simply figuring out how things work. Always happy to
+                                        exchange ideas, learn from others, and explore interesting internet rabbit holes
+                                        together. :)</p>
+                                </div>
+                            </div>
+
+                            <!-- Styled Pill Button with Play Icon -->
+                            <button id="toggle-about-btn" class="pill-btn">
+                                <span class="btn-text">More About Me</span>
+                                <span class="btn-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polygon points="10 8 16 12 10 16 10 8" fill="currentColor"></polygon>
+                                    </svg>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- BOTTOM GRID: 4 Highlight Cards -->
+                <div class="about-cards-grid">
+
+                    <!-- Card 1: Education -->
+                    <div class="about-card">
+                        <div class="card-icon-circle">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Education</h3>
+                        <p class="card-text">M.Sc Biotechnology</p>
+                        <span class="card-highlight">DAVV, Indore</span>
+                    </div>
+
+                    <!-- Card 2: Lab Skills -->
+                    <div class="about-card">
+                        <div class="card-icon-circle">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M10 2v7.5M14 2v7.5M8 9.5h8l3 10.5H5L8 9.5z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Lab Skills</h3>
+                        <p class="card-text"><span id="count-skills">0</span> Laboratory<br>Techniques</p>
+                    </div>
+
+                    <!-- Card 3: Research Projects -->
+                    <div class="about-card">
+                        <div class="card-icon-circle">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M6 18h8M3 22h14M12 6a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM11 2a4 4 0 0 0-4 4"></path>
+                                <path d="M7 6l3 11a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1l3-11"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Lab tests</h3>
+                        <p class="card-text"><span id="count-projects">0</span> Lab tests</p>
+                    </div>
+
+                    <!-- Card 4: Certifications -->
+                    <div class="about-card">
+                        <div class="card-icon-circle">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Certifications</h3>
+                        <p class="card-text"><span id="count-certs">0</span> Professional<br>Certifications</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- LABORATORY SKILLS SECTION -->
+        <section id="skills" class="skills-section">
+            <div class="hero-container">
+
+                <!-- Section Header -->
+                <div class="skills-header">
+                    <h2 class="skills-title">LABORATORY SKILLS</h2>
+                    <div class="skills-underline"></div>
+                </div>
+
+                <!-- Carousel Container -->
+                <div class="skills-carousel-container">
+
+                    <!-- Left Arrow Button -->
+                    <button class="carousel-arrow prev-btn" id="skillsPrevBtn" aria-label="Scroll left">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+
+                    <!-- Scrollable Track -->
+                    <div class="skills-track" id="skillsTrack">
+
+                        <!-- Skill Items -->
+                        <div class="skill-item">
+                            <div class="skill-circle">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8">
+                                    <path
+                                        d="M12 2v20M8 5a4 4 0 0 1 8 0c0 3-8 3-8 6a4 4 0 0 0 8 0M8 13a4 4 0 0 1 8 0c0 3-8 3-8 6a4 4 0 0 0 8 0" />
+                                </svg>
+                            </div>
+                            <span class="skill-name">PCR</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-circle">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8">
+                                    <rect x="4" y="3" width="16" height="18" rx="2" />
+                                    <line x1="8" y1="7" x2="16" y2="7" />
+                                    <line x1="8" y1="11" x2="13" y2="11" />
+                                    <line x1="8" y1="15" x2="16" y2="15" />
+                                </svg>
+                            </div>
+                            <span class="skill-name">Gel<br>Electrophoresis</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-circle">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8">
+                                    <circle cx="12" cy="12" r="9" />
+                                    <circle cx="12" cy="12" r="3" />
+                                    <circle cx="8" cy="9" r="1.5" />
+                                    <circle cx="16" cy="15" r="1.5" />
+                                </svg>
+                            </div>
+                            <span class="skill-name">Cell Culture</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-circle">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8">
+                                    <circle cx="12" cy="12" r="5" />
+                                    <path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2" />
+                                </svg>
+                            </div>
+                            <span class="skill-name">SDS-PAGE</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-circle">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8">
+                                    <path d="M6 3v13a4 4 0 0 0 4 4h4a4 4 0 0 0 4-4V3" />
+                                    <line x1="4" y1="3" x2="20" y2="3" />
+                                    <path d="M6 12h12" />
+                                </svg>
+                            </div>
+                            <span class="skill-name">Spectrophotometry</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-circle">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8">
+                                    <path d="M10 2v7.5M14 2v7.5M8 9.5h8l3 10.5H5L8 9.5z" />
+                                </svg>
+                            </div>
+                            <span class="skill-name">ELISA</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-circle">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8">
+                                    <path d="M6 18h8M3 22h14M12 6a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM11 2a4 4 0 0 0-4 4" />
+                                    <path d="M7 6l3 11a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1l3-11" />
+                                </svg>
+                            </div>
+                            <span class="skill-name">Microscopy</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-circle">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8">
+                                    <path d="M12 2v20M8 7a4 4 0 0 1 8 0M8 17a4 4 0 0 0 8 0" />
+                                    <circle cx="12" cy="12" r="2" />
+                                </svg>
+                            </div>
+                            <span class="skill-name">DNA<br>Extraction</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-circle">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8">
+                                    <path d="M9 3h6v3H9zM10 6v14a2 2 0 0 0 2 2s2-1 2-2V6" />
+                                    <path d="M15 11h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-4" />
+                                </svg>
+                            </div>
+                            <span class="skill-name">Protein<br>Estimation</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-circle">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8">
+                                    <rect x="7" y="2" width="10" height="20" rx="2" />
+                                    <path d="M10 6h4M10 10h4M10 14h4" />
+                                </svg>
+                            </div>
+                            <span class="skill-name">Chromatography</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-circle">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8">
+                                    <rect x="3" y="4" width="18" height="16" rx="2" />
+                                    <line x1="7" y1="8" x2="11" y2="8" />
+                                    <line x1="13" y1="12" x2="17" y2="12" />
+                                    <line x1="7" y1="16" x2="14" y2="16" />
+                                </svg>
+                            </div>
+                            <span class="skill-name">Blotting</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-circle">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8">
+                                    <circle cx="12" cy="12" r="8" />
+                                    <circle cx="12" cy="12" r="2" />
+                                    <path d="M12 4v2M12 18v2M4 12h2M18 12h2" />
+                                </svg>
+                            </div>
+                            <span class="skill-name">Centrifugation</span>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Right Arrow Button -->
+                    <button class="carousel-arrow next-btn" id="skillsNextBtn" aria-label="Scroll right">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="projects-section">
+            <div class="hero-container">
+
+                <div class="projects-header">
+                    <h2 class="projects-title">LAB TESTS</h2>
+                    <div class="projects-underline"></div>
+                </div>
+
+                <!-- EXPERIMENT 1 -->
+                <div class="experiment-group">
+                    <div class="experiment-header">
+                        <h3 class="experiment-title">Molecular & Genomic Techniques</h3>
+                        <p class="experiment-subtitle">Molecular laboratory methods used to isolate, amplify, analyze,
+                            and manipulate nucleic acids (DNA/RNA) and proteins</p>
+                    </div>
+
+                    <div class="projects-grid">
+                        <!-- Project Card 1 -->
+                        <div class="project-card-button" role="button" tabindex="0"
+                            data-img="Resources/Tests/Proj1.jpeg" data-title="Rocket Immunoelectrophoresis"
+                            data-org="Immunoassays techniques" data-desc="This image displays a Rocket Immunoelectrophoresis (Electroimmunodiffusion) agarose gel plate. Visible at the bottom are circular loading wells with white, cone- or rocket-shaped precipitation arcs (precipitin lines) extending upward through the gel.
+The height of each 'rocket' peak is directly proportional to the concentration of antigen loaded in that well.">
+                            <img src="Resources/Tests/Proj1.jpeg" alt="test 1" class="project-bg-img">
+                            <div class="project-overlay">
+                                <h3 class="project-title">Rocket Immunoelectrophoresis</h3>
+                                <p class="project-org">Immunoassays technique</p>
+                            </div>
+                        </div>
+
+                        <!-- Project Card 2 -->
+                        <div class="project-card-button" role="button" tabindex="0"
+                            data-img="Resources/Tests/Proj2.jpeg" data-title="Ouchterlony Double Immunodiffusion"
+                            data-org="Immunoassays technique"
+                            data-skills="PCR, SDS-PAGE, Gene Cloning, Gel Electrophoresis"
+                            data-desc="This image show agarose gel slides used for Ouchterlony Double Immunodiffusion assays. Images highlight distinct, opaque white precipitation lines (precipitin arcs) formed between punched wells">
+                            <img src="Resources/Tests/Proj2.jpeg" alt="Project 2" class="project-bg-img">
+                            <div class="project-overlay">
+                                <h3 class="project-title">Ouchterlony Double Immunodiffusion</h3>
+                                <p class="project-org">Immunoassays technique</p>
+                            </div>
+                        </div>
+
+                        <!-- Project Card 3 -->
+                        <div class="project-card-button" role="button" tabindex="0"
+                            data-img="Resources/Tests/Proj3.jpeg" data-title="Radial Immunodiffusion"
+                            data-org="Immunoassays technique"
+                            data-skills="Spectrophotometry, Extraction Techniques, Assay Protocols, Quality Analysis"
+                            data-desc="This image display standard circular well patterns (rosettes/matrices) cut into agarose-coated glass slides in Radial Immunodiffusion setup.">
+                            <img src="Resources/Tests/Proj3.jpeg" alt="Project 3" class="project-bg-img">
+                            <div class="project-overlay">
+                                <h3 class="project-title">Radial Immunodiffusion</h3>
+                                <p class="project-org">Immunoassays technique</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EXPERIMENT 2 -->
+                <div class="experiment-group">
+                    <!-- <div class="experiment-header">
+                        <h3 class="experiment-title">Experiment 2: Clinical & Quality Diagnostics</h3>
+                        <p class="experiment-subtitle">Microbial quality controls and biomarker assays</p>
+                    </div> -->
+
+                    <div class="projects-grid">
+                        <!-- Project Card 4 -->
+                        <div class="project-card-button" role="button" tabindex="0"
+                            data-img="Resources/Tests/Proj4.jpeg" data-title="Electron Microscopy" data-org="Microscopy"
+                            data-skills="Microbial Culture, Aseptic Technique, Colony Counter, Safety Compliance"
+                            data-desc="Peripheral blood film showing a dense background of pink/biconcave red blood cells (erythrocytes) along with a few purple-stained white blood cells (leukocytes/neutrophils)">
+                            <img src="Resources/Tests/Proj4.jpeg" alt="Project 4" class="project-bg-img">
+                            <div class="project-overlay">
+                                <h3 class="project-title">Electron Microscopy</h3>
+                                <p class="project-org">Microscopy</p>
+                            </div>
+                        </div>
+
+                        <!-- Project Card 5 -->
+                        <div class="project-card-button" role="button" tabindex="0"
+                            data-img="Resources/Tests/Proj5.jpeg" data-title="Sandwhich method ELISA" data-org="ELISA"
+                            data-skills="ELISA, Blood Chemistry, Immunoassays, Sample Diagnostics"
+                            data-desc="This image capture the step-by-step progress and raw readout of an ELISA (Enzyme-Linked Immunosorbent Assay) performed in a 96-well microplate frame using 8-well strips. (Blue wells): The reaction after adding TMB substrate, producing a blue color through HRP enzyme activity.">
+                            <img src="Resources/Tests/Proj5.jpeg" alt="Project 5" class="project-bg-img">
+                            <div class="project-overlay">
+                                <h3 class="project-title">Sandwhich method ELISA</h3>
+                                <p class="project-org">ELISA</p>
+                            </div>
+                        </div>
+
+                        <!-- Project Card 6 -->
+                        <div class="project-card-button" role="button" tabindex="0"
+                            data-img="Resources/Tests/Proj6.jpeg" data-title="SDS-PAGE" data-org="Gel Electrophoresis"
+                            data-skills="BLAST, FASTA, Clustal, Python Data Analysis"
+                            data-desc="This image shows SDS-PAGE (Sodium Dodecyl Sulfate–Polyacrylamide Gel Electrophoresis) gel with distinct blue horizontal bands running down vertical lanes. The left-most lane contains a molecular weight protein marker (ladder), followed by multiple sample lanes displaying resolved protein fractions stained with Coomassie Brilliant Blue">
+                            <img src="Resources/Tests/Proj6.jpeg" alt="Project 6" class="project-bg-img">
+                            <div class="project-overlay">
+                                <h3 class="project-title">SDS-PAGE</h3>
+                                <p class="project-org">Gel Electrophoresis</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+        <!-- CERTIFICATES SECTION -->
+        <section id="certificates" class="certificates-section">
+            <div class="hero-container">
+                <div class="certificates-header">
+                    <h2 class="certificates-title">CERTIFICATES</h2>
+                    <div class="certificates-underline"></div>
+                </div>
+
+                <!-- Carousel Container -->
+                <div class="certs-carousel-container">
+
+                    <!-- Left Arrow Button -->
+                    <button class="carousel-arrow prev-btn" id="certsPrevBtn" aria-label="Scroll left">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+
+                    <!-- Scrollable Track -->
+                    <div class="certs-track" id="certsTrack">
+
+                        <!-- Certificate Button 1 -->
+                        <div class="cert-card-button" role="button" tabindex="0"
+                            data-img="Resources/certificates/RDT.jpeg"
+                            data-title="Recombinant DNA Technology: Gene cloning, Protein expression, and detection"
+                            data-org="NPTEL"
+                            data-skills="Recombinant DNA, PCR Protocols, DNA Sequencing, Gene Expression Analysis">
+
+                            <img src="Resources/certificates/RDT.jpeg" alt="Certificate 1" class="cert-bg-img">
+
+                            <div class="cert-overlay">
+                                <h3 class="cert-title">Recombinant DNA Technology: Gene cloning, Protein expression, and
+                                    detection</h3>
+                                <p class="cert-org">NPTEL</p>
+                            </div>
+                        </div>
+
+                        <!-- Certificate Button 2 -->
+                        <div class="cert-card-button" role="button" tabindex="0"
+                            data-img="Resources/certificates/Basic Immunology Experiment.jpeg"
+                            data-title="Basic Immunology Experiment" data-org="NPTEL"
+                            data-skills="Antigen-antibody interaction assays, immune cell isolation, qualitative/quantitative protein detection, and diagnostic lab protocols.">
+
+                            <img src="Resources/certificates/Basic Immunology Experiment.jpeg" alt="Certificate 2"
+                                class="cert-bg-img">
+
+                            <div class="cert-overlay">
+                                <h3 class="cert-title">Basic Immunology Experiment</h3>
+                                <p class="cert-org">NPTEL</p>
+                            </div>
+                        </div>
+
+                        <!-- Certificate Button 3 -->
+                        <div class="cert-card-button" role="button" tabindex="0"
+                            data-img="Resources/certificates/DBT Barac.jpeg" data-title="DBT BIRAC" data-org="DBT BIRAC"
+                            data-skills="Intellectual Property Rights (IPR), patent filings, technology transfer, bio-incubator models, and commercializing biological research.">
+
+                            <img src="Resources/certificates/DBT Barac.jpeg" alt="Certificate 8" class="cert-bg-img">
+
+                            <div class="cert-overlay">
+                                <h3 class="cert-title">DBT BIRAC</h3>
+                                <p class="cert-org">DBT BIRAC</p>
+                            </div>
+                        </div>
+
+                        <!-- Certificate Button 4 -->
+                        <div class="cert-card-button" role="button" tabindex="0"
+                            data-img="Resources/certificates/BioInformatics_Algorithms_Applications.png"
+                            data-title="BioInformatics: Algorithms & Applications" data-org="NPTEL"
+                            data-skills="Guide RNA Design, Genome Engineering, BLAST, FASTA">
+
+                            <img src="Resources/certificates/BioInformatics_Algorithms_Applications.png"
+                                alt="Certificate 4" class="cert-bg-img">
+
+                            <div class="cert-overlay">
+                                <h3 class="cert-title">BioInformatics: Algorithms & Applications</h3>
+                                <p class="cert-org">NPTEL</p>
+                            </div>
+                        </div>
+
+                        <!-- Certificate Button 5 -->
+                        <div class="cert-card-button" role="button" tabindex="0"
+                            data-img="Resources/certificates/Work Shop on Biotechnological.jpeg"
+                            data-title="WorkShop on Biotechnological Advances" data-org="Zoological Survey of India"
+                            data-skills="Animal tissue preservation,  nocturnal insect collection methods, and ecological field mapping.">
+
+                            <img src="Resources/certificates/Work Shop on Biotechnological.jpeg" alt="Certificate 5"
+                                class="cert-bg-img">
+
+                            <div class="cert-overlay">
+                                <h3 class="cert-title">WorkShop on Biotechnological Advances</h3>
+                                <p class="cert-org">Zoological Survey of India</p>
+                            </div>
+                        </div>
+
+                        <!-- Certificate Button 6 -->
+                        <div class="cert-card-button" role="button" tabindex="0"
+                            data-img="Resources/certificates/Vermicomposting.jpeg"
+                            data-title="Training programe in Vermicomposting"
+                            data-org="Samrat Vikramaditya Vishwavidyalaya"
+                            data-skills="Biomass processing, organic waste management using earthworms, culture monitoring, and biological fertilizer production.">
+
+                            <img src="Resources/certificates/Vermicomposting.jpeg" alt="Certificate 6"
+                                class="cert-bg-img">
+
+                            <div class="cert-overlay">
+                                <h3 class="cert-title">Training programe in Vermicomposting</h3>
+                                <p class="cert-org">Samrat Vikramaditya Vishwavidyalaya</p>
+                            </div>
+                        </div>
+
+                        <!-- Certificate Button 7 -->
+                        <div class="cert-card-button" role="button" tabindex="0"
+                            data-img="Resources/certificates/Recent Trend in Genetics.jpeg"
+                            data-title="Recent Trend in Genetics" data-org="Samrat Vikramaditya Vishwavidyalaya"
+                            data-skills=" Advanced genomic technologies, functional genetics, hereditary study models, and current trends in translational biotechnology.">
+
+                            <img src="Resources/certificates/Recent Trend in Genetics.jpeg" alt="Certificate 7"
+                                class="cert-bg-img">
+
+                            <div class="cert-overlay">
+                                <h3 class="cert-title">Recent Trend in Genetics</h3>
+                                <p class="cert-org">Samrat Vikramaditya Vishwavidyalaya</p>
+                            </div>
+                        </div>
+
+                        <!-- Certificate Button 8 -->
+                        <div class="cert-card-button" role="button" tabindex="0"
+                            data-img="Resources/certificates/Biomedical Nanotechnology.png"
+                            data-title="Biomedical Nanotechnology" data-org="NPTEL"
+                            data-skills="Designing targeted drug nanocarriers, biosensors, and nanoscaffolds while evaluating cellular biocompatibility and cytotoxicity.">
+
+                            <img src="Resources/certificates/Biomedical Nanotechnology.png" alt="Certificate 3"
+                                class="cert-bg-img">
+
+                            <div class="cert-overlay">
+                                <h3 class="cert-title">Biomedical Nanotechnology</h3>
+                                <p class="cert-org">NPTEL</p>
+                            </div>
+                        </div>
+
+                        <!-- Certificate Button 9
+                        <div class="cert-card-button" role="button" tabindex="0"
+                            data-img="Resources/certificates/Kito Ke Sangrkhyan.jpeg" data-title="Kito Ke Sangrkhyan"
+                            data-org="UC San Diego Online"
+                            data-skills="Bioinformatics, Sequence Analysis, Genomics, Computational Biology">
+
+                            <img src="Resources/certificates/Kito Ke Sangrkhyan.jpeg" alt="Certificate 9"
+                                class="cert-bg-img">
+
+                            <div class="cert-overlay">
+                                <h3 class="cert-title">Kito Ke Sangrkhyan</h3>
+                                <p class="cert-org">UC San Diego Online</p>
+                            </div>
+                        </div> -->
+
+                    </div>
+
+                    <!-- Right Arrow Button -->
+                    <button class="carousel-arrow next-btn" id="certsNextBtn" aria-label="Scroll right">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- JOURNEY SO FAR / TIMELINE SECTION -->
+        <section id="journey" class="journey-section">
+            <div class="hero-container">
+
+                <div class="journey-header">
+                    <h2 class="journey-title">JOURNEY SO FAR</h2>
+                    <div class="journey-underline"></div>
+                </div>
+
+                <div class="timeline-wrapper">
+                    <div class="timeline-line"></div>
+
+                    <div class="timeline-track">
+
+                        <!-- 2019: 10th CBSE -->
+                        <div class="timeline-item">
+                            <div class="timeline-icon-circle">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                                    <line x1="8" y1="6" x2="16" y2="6"></line>
+                                    <line x1="8" y1="10" x2="14" y2="10"></line>
+                                </svg>
+                            </div>
+                            <div class="timeline-dot"></div>
+                            <h3 class="timeline-year">2019</h3>
+                            <p class="timeline-desc">Completed 10th<br>Ambe School CBSE Unit, Vadodara</p>
+                        </div>
+
+                        <!-- 2021: 12th K.V ONGC -->
+                        <div class="timeline-item">
+                            <div class="timeline-icon-circle">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                                    <line x1="8" y1="6" x2="16" y2="6"></line>
+                                    <line x1="8" y1="10" x2="14" y2="10"></line>
+                                </svg>
+                            </div>
+                            <div class="timeline-dot"></div>
+                            <h3 class="timeline-year">2021</h3>
+                            <p class="timeline-desc">Completed 12th<br>K.V ONGC, Vadodara</p>
+                        </div>
+
+                        <!-- 2022: Madhav Govt Hospital Internship -->
+                        <div class="timeline-item">
+                            <div class="timeline-icon-circle">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 2v20"></path>
+                                    <path d="M8 5a4 4 0 0 1 8 0c0 3-8 3-8 6a4 4 0 0 0 8 0"></path>
+                                    <path d="M8 13a4 4 0 0 1 8 0c0 3-8 3-8 6a4 4 0 0 0 8 0"></path>
+                                </svg>
+                            </div>
+                            <div class="timeline-dot"></div>
+                            <h3 class="timeline-year">2022</h3>
+                            <p class="timeline-desc">Internship at<br>Madhav Govt Hospital, Ujjain</p>
+                        </div>
+
+                        <!-- 2023: Sanchi Internship -->
+                        <div class="timeline-item">
+                            <div class="timeline-icon-circle">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M10 2v7.5M14 2v7.5M8 9.5h8l3 10.5H5L8 9.5z"></path>
+                                    <line x1="9" y1="14" x2="15" y2="14"></line>
+                                </svg>
+                            </div>
+                            <div class="timeline-dot"></div>
+                            <h3 class="timeline-year">2023</h3>
+                            <p class="timeline-desc">Internship at<br>Sanchi, Ujjain</p>
+                        </div>
+
+                        <!-- 2025: IISER Bhopal Internship -->
+                        <div class="timeline-item">
+                            <div class="timeline-icon-circle">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="8" r="6"></circle>
+                                    <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"></path>
+                                </svg>
+                            </div>
+                            <div class="timeline-dot"></div>
+                            <h3 class="timeline-year">2025</h3>
+                            <p class="timeline-desc">Internship at<br>IISER Bhopal</p>
+                        </div>
+
+                        <!-- 2026 Event 1: Apicore Pharmaceuticals Internship -->
+                        <div class="timeline-item">
+                            <div class="timeline-icon-circle">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M10 2v7.5M14 2v7.5M8 9.5h8l3 10.5H5L8 9.5z"></path>
+                                    <line x1="9" y1="14" x2="15" y2="14"></line>
+                                </svg>
+                            </div>
+                            <div class="timeline-dot"></div>
+                            <h3 class="timeline-year">2026</h3>
+                            <p class="timeline-desc">Internship at<br>Apicore Pharmaceuticals</p>
+                        </div>
+
+                        <!-- 2026 Event 2: Graduation -->
+                        <div class="timeline-item">
+                            <div class="timeline-icon-circle">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                    <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
+                                </svg>
+                            </div>
+                            <div class="timeline-dot"></div>
+                            <h3 class="timeline-year">2026</h3>
+                            <p class="timeline-desc">Graduated in B.Sc Hons Biotech<br>Samrat Vikramaditya
+                                Vishwavidyalaya</p>
+                        </div>
+
+                        <!-- 2026 Event 3: Post Graduation -->
+                        <div class="timeline-item">
+                            <div class="timeline-icon-circle">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                    <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
+                                </svg>
+                            </div>
+                            <div class="timeline-dot"></div>
+                            <h3 class="timeline-year">2026</h3>
+                            <p class="timeline-desc"> Started Post-Graduation<br>Devi Ahilya Vishwavidyalaya</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- CONTACT & FOOTER SECTION -->
+    <footer id="contact" class="contact-footer">
+        <div class="hero-container">
+
+            <div class="contact-grid">
+
+                <div class="contact-info">
+                    <h2 class="contact-title">Let's Connect</h2>
+                    <div class="contact-underline"></div>
+
+                    <p class="contact-desc">
+                        I'm always open to discussing research, opportunities and collaborations.
+                    </p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>pspallavisahu01@gmail.com</span>
+                        </div>
+
+                        <div class="contact-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                            <span>+91 91578 01325</span>
+                        </div>
+
+                        <div class="contact-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>Indore, Madhya Pradesh, India</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <div class="form-row">
+                        <input type="hidden" name="access_key" value="185a4035-7b57-4d01-a891-67463d92c4f8">
+                        <input type="text" name="name" placeholder="Your Name" required class="form-input">
+                        <input type="email" name="email" placeholder="Your Email" required class="form-input">
+                    </div>
+                    <input type="text" name="subject" placeholder="Subject" required class="form-input">
+                    <textarea name="message" placeholder="Message" rows="4" required
+                        class="form-input form-textarea"></textarea>
+
+                    <button type="submit" class="contact-submit-btn">
+                        Send Message
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </form>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 Pallavi Sahu. All Rights Reserved.</p>
+                <p class="footer-tagline">&ldquo;Research today, for a better tomorrow.&rdquo;</p>
+            </div>
+
+        </div>
+    </footer>
+    <!-- Certificate Detail Modal -->
+    <div id="certModal" class="cert-modal" aria-hidden="true">
+        <div class="cert-modal-backdrop" id="certModalBackdrop"></div>
+        <div class="cert-modal-card">
+            <!-- Updated Close Button with SVG -->
+            <button class="cert-modal-close" id="certModalClose" aria-label="Close">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <div class="cert-modal-img-wrapper">
+                <img id="modalCertImg" src="" alt="Certificate Preview">
+            </div>
+
+            <div class="cert-modal-details">
+                <span id="modalCertOrg" class="cert-modal-org"></span>
+                <h3 id="modalCertTitle" class="cert-modal-title"></h3>
+
+                <hr class="cert-modal-divider">
+
+                <div class="cert-modal-section">
+                    <span class="cert-modal-label">Skills Gained</span>
+                    <p id="modalCertSkills" class="cert-modal-text"></p>
+                </div>
+
+                <!-- Future detail blocks can be added here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Detail Modal -->
+    <div id="projectModal" class="project-modal" aria-hidden="true">
+        <div class="project-modal-backdrop" id="projectModalBackdrop"></div>
+        <div class="project-modal-card">
+            <button class="project-modal-close" id="projectModalClose" aria-label="Close">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <div class="project-modal-img-wrapper">
+                <img id="modalProjectImg" src="" alt="Project Preview">
+            </div>
+
+            <div class="project-modal-details">
+                <span id="modalProjectOrg" class="project-modal-org"></span>
+                <h3 id="modalProjectTitle" class="project-modal-title"></h3>
+
+                <hr class="project-modal-divider">
+
+                <div class="project-modal-section">
+                    <span class="project-modal-label">Overview & Details</span>
+                    <p id="modalProjectDesc" class="project-modal-text"></p>
+                </div>
+
+                <div class="project-modal-section" style="margin-top: 16px;">
+                    <span class="project-modal-label"></span>
+                    <p id="modalProjectSkills" class="project-modal-text"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
